@@ -1,31 +1,29 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // IMPORTS
-import './main.scss'
+import "./main.scss";
 
 // VIEWS
-import { Home } from './views/Home'
-import Login from './views/Auth/Login/Login'
-import Register from './views/Auth/Register/Register'
-import ForgotPassword from './views/Auth/Forgot-password/Forgot-password'
-import ResetPassword from './views/Auth/Reset-password/Reset-password'
-import { NotFound } from './views/NotFound'
+import { Home } from "./views/Home";
+import Login from "./views/Auth/Login/Login";
+import Register from "./views/Auth/Register/Register";
+import ForgotPassword from "./views/Auth/Forgot-password/Forgot-password";
+import ResetPassword from "./views/Auth/Reset-password/Reset-password";
+import { NotFound } from "./views/NotFound";
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-
-
         {/* Routes Public */}
-  <Route path="/login" element={<Login />} />
-  <Route path="/register" element={<Register />} />
-  <Route path="/forgot-password" element={<ForgotPassword />} />
-  <Route path="/reset-password" element={<ResetPassword />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
-  </React.StrictMode>
-)
+  </React.StrictMode>,
+);
