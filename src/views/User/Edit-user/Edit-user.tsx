@@ -120,7 +120,7 @@ const EditUser: React.FC = () => {
             <p>Update your personal information</p>
 
             <form className="edit-form" onSubmit={handleSubmit} noValidate>
-              <label htmlFor="nombres">Name</label>
+              <label htmlFor="nombres">Nombre</label>
               <input
                 id="nombres"
                 type="text"
@@ -130,7 +130,7 @@ const EditUser: React.FC = () => {
                 required
               />
 
-              <label htmlFor="edad">Age</label>
+              <label htmlFor="edad">Edad</label>
               <input
                 id="edad"
                 type="number"
@@ -142,7 +142,7 @@ const EditUser: React.FC = () => {
                 required
               />
 
-              <label htmlFor="correo">Email</label>
+              <label htmlFor="correo">Correo electronico</label>
               <input
                 id="correo"
                 type="email"
@@ -155,19 +155,19 @@ const EditUser: React.FC = () => {
               {error && <div className="error-message">{error}</div>}
 
               <button type="submit" className="button" disabled={loading}>
-                {loading ? "Updating..." : "Update Profile"}
+                {loading ? "Actualizando..." : "Actualizar perfil"}
               </button>
             </form>
 
             <div className="additional-links">
               <label className="login-redirect">
                 <Link to="/change-password" className="login-link">
-                  Change password
+                  Cambiar contraseña
                 </Link>
               </label>
               <label className="login-redirect">
                 <Link to="/user" className="login-link">
-                  Cancel and return
+                  Cancelar y volver
                 </Link>
               </label>
             </div>
